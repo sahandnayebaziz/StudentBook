@@ -24,6 +24,10 @@ class AppRequestDelegate: NSObject, NSOpenSavePanelDelegate  {
         }
     }
     
+    static func requestMainViewController() -> ViewController {
+        return (NSApplication.sharedApplication().delegate as! AppDelegate).mainVC
+    }
+    
     private func loadData() {
         let open = NSOpenPanel()
         open.canChooseDirectories = true
@@ -33,11 +37,10 @@ class AppRequestDelegate: NSObject, NSOpenSavePanelDelegate  {
         if (result == NSFileHandlingPanelOKButton) {
             open.close()
             if let url = open.URL {
-                 if let reader = StreamReader(path: url.path!) {
-                    for line in reader {
-                        print(line)
-                    }
+                dispatch_to_background_queue {
+                    SBCSVReader.readFileAtURL(url)
                 }
+                // pass back the data from the url
             }
         }
     }

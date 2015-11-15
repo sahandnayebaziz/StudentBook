@@ -13,6 +13,11 @@
 		D804CB981BF8EB3B00B8C659 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D804CB971BF8EB3B00B8C659 /* Assets.xcassets */; };
 		D804CB9B1BF8EB3B00B8C659 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D804CB991BF8EB3B00B8C659 /* Main.storyboard */; };
 		D804CBA61BF8EB3B00B8C659 /* StudentBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D804CBA51BF8EB3B00B8C659 /* StudentBookTests.swift */; };
+		D87F56281BF915C500491092 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87F56271BF915C500491092 /* Student.swift */; };
+		D87F562A1BF915DB00491092 /* ScheduleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87F56291BF915DB00491092 /* ScheduleItem.swift */; };
+		D87F562E1BF916A500491092 /* StudentBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87F562D1BF916A500491092 /* StudentBody.swift */; };
+		D87F56301BF9189F00491092 /* threading.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87F562F1BF9189F00491092 /* threading.swift */; };
+		D87F56321BF924EE00491092 /* SBNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87F56311BF924EE00491092 /* SBNotifications.swift */; };
 		D886DFF81BF8F6A100D9648D /* StreamReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D886DFF71BF8F6A100D9648D /* StreamReader.swift */; };
 		D886DFFA1BF8F82B00D9648D /* CSVReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D886DFF91BF8F82B00D9648D /* CSVReader.swift */; };
 		D886DFFF1BF910AA00D9648D /* AppRequestDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D886DFFE1BF910AA00D9648D /* AppRequestDelegate.swift */; };
@@ -42,6 +47,11 @@
 		D804CBA11BF8EB3B00B8C659 /* StudentBookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudentBookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D804CBA51BF8EB3B00B8C659 /* StudentBookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentBookTests.swift; sourceTree = "<group>"; };
 		D804CBA71BF8EB3B00B8C659 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D87F56271BF915C500491092 /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		D87F56291BF915DB00491092 /* ScheduleItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleItem.swift; sourceTree = "<group>"; };
+		D87F562D1BF916A500491092 /* StudentBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentBody.swift; sourceTree = "<group>"; };
+		D87F562F1BF9189F00491092 /* threading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = threading.swift; sourceTree = "<group>"; };
+		D87F56311BF924EE00491092 /* SBNotifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBNotifications.swift; sourceTree = "<group>"; };
 		D886DFF71BF8F6A100D9648D /* StreamReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamReader.swift; sourceTree = "<group>"; };
 		D886DFF91BF8F82B00D9648D /* CSVReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSVReader.swift; sourceTree = "<group>"; };
 		D886DFFE1BF910AA00D9648D /* AppRequestDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRequestDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +117,7 @@
 		D804CB921BF8EB3B00B8C659 /* StudentBook */ = {
 			isa = PBXGroup;
 			children = (
+				D87F56261BF915B400491092 /* Model */,
 				D888C0F11BF8F47D0089DD55 /* Extensions */,
 				D888C0F21BF8F4880089DD55 /* Controllers */,
 				D888C0F31BF8F48E0089DD55 /* View Controllers */,
@@ -124,6 +135,16 @@
 			path = StudentBookTests;
 			sourceTree = "<group>";
 		};
+		D87F56261BF915B400491092 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D87F562D1BF916A500491092 /* StudentBody.swift */,
+				D87F56271BF915C500491092 /* Student.swift */,
+				D87F56291BF915DB00491092 /* ScheduleItem.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		D886DFFB1BF8F83D00D9648D /* CSV */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				D888C0EF1BF8F3240089DD55 /* DarkNSWindowController.swift */,
+				D87F562F1BF9189F00491092 /* threading.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -147,6 +169,7 @@
 				D804CB931BF8EB3B00B8C659 /* AppDelegate.swift */,
 				D886DFFE1BF910AA00D9648D /* AppRequestDelegate.swift */,
 				D886DFFB1BF8F83D00D9648D /* CSV */,
+				D87F56311BF924EE00491092 /* SBNotifications.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -320,11 +343,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D87F56321BF924EE00491092 /* SBNotifications.swift in Sources */,
 				D886DFF81BF8F6A100D9648D /* StreamReader.swift in Sources */,
 				D888C0F01BF8F3240089DD55 /* DarkNSWindowController.swift in Sources */,
 				D886DFFF1BF910AA00D9648D /* AppRequestDelegate.swift in Sources */,
 				D886DFFA1BF8F82B00D9648D /* CSVReader.swift in Sources */,
+				D87F56301BF9189F00491092 /* threading.swift in Sources */,
+				D87F562A1BF915DB00491092 /* ScheduleItem.swift in Sources */,
 				D804CB961BF8EB3B00B8C659 /* ViewController.swift in Sources */,
+				D87F56281BF915C500491092 /* Student.swift in Sources */,
+				D87F562E1BF916A500491092 /* StudentBody.swift in Sources */,
 				D804CB941BF8EB3B00B8C659 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
