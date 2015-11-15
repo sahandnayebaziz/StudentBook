@@ -11,7 +11,8 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-
+    weak var window: NSWindow!
+    var mainVC: ViewController!
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         // Insert code here to initialize your application
@@ -22,5 +23,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
 
+    @IBAction func loadStudents(sender: AnyObject) {
+        mainVC.receiveRequest(StudentBookAppRequest.LoadData)
+    }
 }
 

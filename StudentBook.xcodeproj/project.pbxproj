@@ -7,11 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C5A85DC2C92F481127906CE /* Pods_StudentBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05523ED42557DDF156AA2CB8 /* Pods_StudentBook.framework */; };
 		D804CB941BF8EB3B00B8C659 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D804CB931BF8EB3B00B8C659 /* AppDelegate.swift */; };
 		D804CB961BF8EB3B00B8C659 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D804CB951BF8EB3B00B8C659 /* ViewController.swift */; };
 		D804CB981BF8EB3B00B8C659 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D804CB971BF8EB3B00B8C659 /* Assets.xcassets */; };
 		D804CB9B1BF8EB3B00B8C659 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D804CB991BF8EB3B00B8C659 /* Main.storyboard */; };
 		D804CBA61BF8EB3B00B8C659 /* StudentBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D804CBA51BF8EB3B00B8C659 /* StudentBookTests.swift */; };
+		D886DFF81BF8F6A100D9648D /* StreamReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D886DFF71BF8F6A100D9648D /* StreamReader.swift */; };
+		D886DFFA1BF8F82B00D9648D /* CSVReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D886DFF91BF8F82B00D9648D /* CSVReader.swift */; };
+		D886DFFF1BF910AA00D9648D /* AppRequestDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D886DFFE1BF910AA00D9648D /* AppRequestDelegate.swift */; };
+		D888C0F01BF8F3240089DD55 /* DarkNSWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D888C0EF1BF8F3240089DD55 /* DarkNSWindowController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +30,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05523ED42557DDF156AA2CB8 /* Pods_StudentBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StudentBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E49A5BBEEF311096BFE843A /* Pods-StudentBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudentBook.release.xcconfig"; path = "Pods/Target Support Files/Pods-StudentBook/Pods-StudentBook.release.xcconfig"; sourceTree = "<group>"; };
+		A464A7F858C71844965A820F /* Pods-StudentBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudentBook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StudentBook/Pods-StudentBook.debug.xcconfig"; sourceTree = "<group>"; };
 		D804CB901BF8EB3B00B8C659 /* StudentBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudentBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D804CB931BF8EB3B00B8C659 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D804CB951BF8EB3B00B8C659 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -34,6 +42,10 @@
 		D804CBA11BF8EB3B00B8C659 /* StudentBookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudentBookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D804CBA51BF8EB3B00B8C659 /* StudentBookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentBookTests.swift; sourceTree = "<group>"; };
 		D804CBA71BF8EB3B00B8C659 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D886DFF71BF8F6A100D9648D /* StreamReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamReader.swift; sourceTree = "<group>"; };
+		D886DFF91BF8F82B00D9648D /* CSVReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSVReader.swift; sourceTree = "<group>"; };
+		D886DFFE1BF910AA00D9648D /* AppRequestDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRequestDelegate.swift; sourceTree = "<group>"; };
+		D888C0EF1BF8F3240089DD55 /* DarkNSWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DarkNSWindowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C5A85DC2C92F481127906CE /* Pods_StudentBook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,12 +67,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		113FCA2BC738836F15463C84 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A464A7F858C71844965A820F /* Pods-StudentBook.debug.xcconfig */,
+				3E49A5BBEEF311096BFE843A /* Pods-StudentBook.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A7C3875D971F9E63BF81947B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				05523ED42557DDF156AA2CB8 /* Pods_StudentBook.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D804CB871BF8EB3B00B8C659 = {
 			isa = PBXGroup;
 			children = (
 				D804CB921BF8EB3B00B8C659 /* StudentBook */,
 				D804CBA41BF8EB3B00B8C659 /* StudentBookTests */,
 				D804CB911BF8EB3B00B8C659 /* Products */,
+				113FCA2BC738836F15463C84 /* Pods */,
+				A7C3875D971F9E63BF81947B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,11 +107,10 @@
 		D804CB921BF8EB3B00B8C659 /* StudentBook */ = {
 			isa = PBXGroup;
 			children = (
-				D804CB931BF8EB3B00B8C659 /* AppDelegate.swift */,
-				D804CB951BF8EB3B00B8C659 /* ViewController.swift */,
-				D804CB971BF8EB3B00B8C659 /* Assets.xcassets */,
-				D804CB991BF8EB3B00B8C659 /* Main.storyboard */,
-				D804CB9C1BF8EB3B00B8C659 /* Info.plist */,
+				D888C0F11BF8F47D0089DD55 /* Extensions */,
+				D888C0F21BF8F4880089DD55 /* Controllers */,
+				D888C0F31BF8F48E0089DD55 /* View Controllers */,
+				D888C0F41BF8F4960089DD55 /* Supporting Files */,
 			);
 			path = StudentBook;
 			sourceTree = "<group>";
@@ -93,6 +124,51 @@
 			path = StudentBookTests;
 			sourceTree = "<group>";
 		};
+		D886DFFB1BF8F83D00D9648D /* CSV */ = {
+			isa = PBXGroup;
+			children = (
+				D886DFF91BF8F82B00D9648D /* CSVReader.swift */,
+				D886DFF71BF8F6A100D9648D /* StreamReader.swift */,
+			);
+			name = CSV;
+			sourceTree = "<group>";
+		};
+		D888C0F11BF8F47D0089DD55 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D888C0EF1BF8F3240089DD55 /* DarkNSWindowController.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		D888C0F21BF8F4880089DD55 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D804CB931BF8EB3B00B8C659 /* AppDelegate.swift */,
+				D886DFFE1BF910AA00D9648D /* AppRequestDelegate.swift */,
+				D886DFFB1BF8F83D00D9648D /* CSV */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D888C0F31BF8F48E0089DD55 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D804CB951BF8EB3B00B8C659 /* ViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		D888C0F41BF8F4960089DD55 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D804CB971BF8EB3B00B8C659 /* Assets.xcassets */,
+				D804CB991BF8EB3B00B8C659 /* Main.storyboard */,
+				D804CB9C1BF8EB3B00B8C659 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -100,9 +176,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D804CBAA1BF8EB3B00B8C659 /* Build configuration list for PBXNativeTarget "StudentBook" */;
 			buildPhases = (
+				8B2D65477D98CD4AECAA62BE /* Check Pods Manifest.lock */,
 				D804CB8C1BF8EB3B00B8C659 /* Sources */,
 				D804CB8D1BF8EB3B00B8C659 /* Frameworks */,
 				D804CB8E1BF8EB3B00B8C659 /* Resources */,
+				426824724BEA770BDB020590 /* Embed Pods Frameworks */,
+				8B9A692B9963D3FCAE32D11D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -188,11 +267,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		426824724BEA770BDB020590 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StudentBook/Pods-StudentBook-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B2D65477D98CD4AECAA62BE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8B9A692B9963D3FCAE32D11D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StudentBook/Pods-StudentBook-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D804CB8C1BF8EB3B00B8C659 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D886DFF81BF8F6A100D9648D /* StreamReader.swift in Sources */,
+				D888C0F01BF8F3240089DD55 /* DarkNSWindowController.swift in Sources */,
+				D886DFFF1BF910AA00D9648D /* AppRequestDelegate.swift in Sources */,
+				D886DFFA1BF8F82B00D9648D /* CSVReader.swift in Sources */,
 				D804CB961BF8EB3B00B8C659 /* ViewController.swift in Sources */,
 				D804CB941BF8EB3B00B8C659 /* AppDelegate.swift in Sources */,
 			);
@@ -310,6 +441,7 @@
 		};
 		D804CBAB1BF8EB3B00B8C659 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A464A7F858C71844965A820F /* Pods-StudentBook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -322,6 +454,7 @@
 		};
 		D804CBAC1BF8EB3B00B8C659 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E49A5BBEEF311096BFE843A /* Pods-StudentBook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -377,6 +510,7 @@
 				D804CBAC1BF8EB3B00B8C659 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D804CBAD1BF8EB3B00B8C659 /* Build configuration list for PBXNativeTarget "StudentBookTests" */ = {
 			isa = XCConfigurationList;
@@ -385,6 +519,7 @@
 				D804CBAF1BF8EB3B00B8C659 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
