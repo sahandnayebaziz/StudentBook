@@ -13,6 +13,10 @@
 		D804CB981BF8EB3B00B8C659 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D804CB971BF8EB3B00B8C659 /* Assets.xcassets */; };
 		D804CB9B1BF8EB3B00B8C659 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D804CB991BF8EB3B00B8C659 /* Main.storyboard */; };
 		D804CBA61BF8EB3B00B8C659 /* StudentBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D804CBA51BF8EB3B00B8C659 /* StudentBookTests.swift */; };
+		D852A0D31C05154100C4720C /* StudentsTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D852A0D21C05154100C4720C /* StudentsTableViewDataSource.swift */; };
+		D852A0D51C05157600C4720C /* StudentsTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D852A0D41C05157600C4720C /* StudentsTableViewDelegate.swift */; };
+		D852A0DE1C0527FF00C4720C /* StudentsTableViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D852A0DC1C0527FF00C4720C /* StudentsTableViewRow.swift */; };
+		D852A0DF1C0527FF00C4720C /* StudentsTableViewRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D852A0DD1C0527FF00C4720C /* StudentsTableViewRow.xib */; };
 		D85C8D171C04F3B400F3F993 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85C8D151C04F3B400F3F993 /* MainWindowController.swift */; };
 		D85C8D181C04F3B400F3F993 /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D85C8D161C04F3B400F3F993 /* MainWindowController.xib */; };
 		D85C8D251C0504A400F3F993 /* NSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85C8D241C0504A400F3F993 /* NSView.swift */; };
@@ -58,6 +62,10 @@
 		D804CBA11BF8EB3B00B8C659 /* StudentBookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudentBookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D804CBA51BF8EB3B00B8C659 /* StudentBookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentBookTests.swift; sourceTree = "<group>"; };
 		D804CBA71BF8EB3B00B8C659 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D852A0D21C05154100C4720C /* StudentsTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentsTableViewDataSource.swift; sourceTree = "<group>"; };
+		D852A0D41C05157600C4720C /* StudentsTableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentsTableViewDelegate.swift; sourceTree = "<group>"; };
+		D852A0DC1C0527FF00C4720C /* StudentsTableViewRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentsTableViewRow.swift; sourceTree = "<group>"; };
+		D852A0DD1C0527FF00C4720C /* StudentsTableViewRow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StudentsTableViewRow.xib; sourceTree = "<group>"; };
 		D85C8D151C04F3B400F3F993 /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		D85C8D161C04F3B400F3F993 /* MainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindowController.xib; sourceTree = "<group>"; };
 		D85C8D241C0504A400F3F993 /* NSView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSView.swift; sourceTree = "<group>"; };
@@ -183,6 +191,9 @@
 				D85C8D151C04F3B400F3F993 /* MainWindowController.swift */,
 				D85C8D301C050E5200F3F993 /* SidebarViewController.swift */,
 				D85C8D281C05061800F3F993 /* StudentsTableViewViewController.swift */,
+				D852A0D41C05157600C4720C /* StudentsTableViewDelegate.swift */,
+				D852A0D21C05154100C4720C /* StudentsTableViewDataSource.swift */,
+				D852A0DC1C0527FF00C4720C /* StudentsTableViewRow.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -195,6 +206,7 @@
 				D85C8D161C04F3B400F3F993 /* MainWindowController.xib */,
 				D85C8D311C050E5200F3F993 /* SidebarViewController.xib */,
 				D85C8D291C05061800F3F993 /* StudentsTableViewViewController.xib */,
+				D852A0DD1C0527FF00C4720C /* StudentsTableViewRow.xib */,
 			);
 			name = XIBs;
 			sourceTree = "<group>";
@@ -347,6 +359,7 @@
 				D804CB9B1BF8EB3B00B8C659 /* Main.storyboard in Resources */,
 				D85C8D181C04F3B400F3F993 /* MainWindowController.xib in Resources */,
 				D85C8D371C050EEA00F3F993 /* MainViewController.xib in Resources */,
+				D852A0DF1C0527FF00C4720C /* StudentsTableViewRow.xib in Resources */,
 				D85C8D331C050E5200F3F993 /* SidebarViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,12 +432,15 @@
 				D85C8D171C04F3B400F3F993 /* MainWindowController.swift in Sources */,
 				D888C0F01BF8F3240089DD55 /* DarkNSWindowController.swift in Sources */,
 				D886DFFF1BF910AA00D9648D /* AppRequestDelegate.swift in Sources */,
+				D852A0D51C05157600C4720C /* StudentsTableViewDelegate.swift in Sources */,
 				D886DFFA1BF8F82B00D9648D /* CSVReader.swift in Sources */,
 				D85C8D361C050EEA00F3F993 /* MainViewController.swift in Sources */,
+				D852A0D31C05154100C4720C /* StudentsTableViewDataSource.swift in Sources */,
 				D85C8D251C0504A400F3F993 /* NSView.swift in Sources */,
 				D85C8D2A1C05061800F3F993 /* StudentsTableViewViewController.swift in Sources */,
 				D87F56301BF9189F00491092 /* threading.swift in Sources */,
 				D87F562A1BF915DB00491092 /* ScheduleItem.swift in Sources */,
+				D852A0DE1C0527FF00C4720C /* StudentsTableViewRow.swift in Sources */,
 				D804CB961BF8EB3B00B8C659 /* ViewController.swift in Sources */,
 				D87F56281BF915C500491092 /* Student.swift in Sources */,
 				D87F562E1BF916A500491092 /* StudentBody.swift in Sources */,
@@ -551,6 +567,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = StudentBook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = me.sahand.StudentBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -564,6 +581,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = StudentBook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = me.sahand.StudentBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
