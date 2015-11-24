@@ -13,6 +13,17 @@
 		D804CB981BF8EB3B00B8C659 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D804CB971BF8EB3B00B8C659 /* Assets.xcassets */; };
 		D804CB9B1BF8EB3B00B8C659 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D804CB991BF8EB3B00B8C659 /* Main.storyboard */; };
 		D804CBA61BF8EB3B00B8C659 /* StudentBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D804CBA51BF8EB3B00B8C659 /* StudentBookTests.swift */; };
+		D85C8D171C04F3B400F3F993 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85C8D151C04F3B400F3F993 /* MainWindowController.swift */; };
+		D85C8D181C04F3B400F3F993 /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D85C8D161C04F3B400F3F993 /* MainWindowController.xib */; };
+		D85C8D251C0504A400F3F993 /* NSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85C8D241C0504A400F3F993 /* NSView.swift */; };
+		D85C8D2A1C05061800F3F993 /* StudentsTableViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85C8D281C05061800F3F993 /* StudentsTableViewViewController.swift */; };
+		D85C8D2B1C05061800F3F993 /* StudentsTableViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D85C8D291C05061800F3F993 /* StudentsTableViewViewController.xib */; };
+		D85C8D2E1C050A1800F3F993 /* MainContainerSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85C8D2C1C050A1800F3F993 /* MainContainerSplitViewController.swift */; };
+		D85C8D2F1C050A1800F3F993 /* MainContainerSplitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D85C8D2D1C050A1800F3F993 /* MainContainerSplitViewController.xib */; };
+		D85C8D321C050E5200F3F993 /* SidebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85C8D301C050E5200F3F993 /* SidebarViewController.swift */; };
+		D85C8D331C050E5200F3F993 /* SidebarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D85C8D311C050E5200F3F993 /* SidebarViewController.xib */; };
+		D85C8D361C050EEA00F3F993 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85C8D341C050EEA00F3F993 /* MainViewController.swift */; };
+		D85C8D371C050EEA00F3F993 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D85C8D351C050EEA00F3F993 /* MainViewController.xib */; };
 		D87F56281BF915C500491092 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87F56271BF915C500491092 /* Student.swift */; };
 		D87F562A1BF915DB00491092 /* ScheduleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87F56291BF915DB00491092 /* ScheduleItem.swift */; };
 		D87F562E1BF916A500491092 /* StudentBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87F562D1BF916A500491092 /* StudentBody.swift */; };
@@ -47,6 +58,17 @@
 		D804CBA11BF8EB3B00B8C659 /* StudentBookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudentBookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D804CBA51BF8EB3B00B8C659 /* StudentBookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentBookTests.swift; sourceTree = "<group>"; };
 		D804CBA71BF8EB3B00B8C659 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D85C8D151C04F3B400F3F993 /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
+		D85C8D161C04F3B400F3F993 /* MainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindowController.xib; sourceTree = "<group>"; };
+		D85C8D241C0504A400F3F993 /* NSView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSView.swift; sourceTree = "<group>"; };
+		D85C8D281C05061800F3F993 /* StudentsTableViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentsTableViewViewController.swift; sourceTree = "<group>"; };
+		D85C8D291C05061800F3F993 /* StudentsTableViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StudentsTableViewViewController.xib; sourceTree = "<group>"; };
+		D85C8D2C1C050A1800F3F993 /* MainContainerSplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainContainerSplitViewController.swift; sourceTree = "<group>"; };
+		D85C8D2D1C050A1800F3F993 /* MainContainerSplitViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainContainerSplitViewController.xib; sourceTree = "<group>"; };
+		D85C8D301C050E5200F3F993 /* SidebarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarViewController.swift; sourceTree = "<group>"; };
+		D85C8D311C050E5200F3F993 /* SidebarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SidebarViewController.xib; sourceTree = "<group>"; };
+		D85C8D341C050EEA00F3F993 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		D85C8D351C050EEA00F3F993 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		D87F56271BF915C500491092 /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		D87F56291BF915DB00491092 /* ScheduleItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleItem.swift; sourceTree = "<group>"; };
 		D87F562D1BF916A500491092 /* StudentBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentBody.swift; sourceTree = "<group>"; };
@@ -117,6 +139,7 @@
 		D804CB921BF8EB3B00B8C659 /* StudentBook */ = {
 			isa = PBXGroup;
 			children = (
+				D80782571C04E59D007344CA /* View Families */,
 				D87F56261BF915B400491092 /* Model */,
 				D888C0F11BF8F47D0089DD55 /* Extensions */,
 				D888C0F21BF8F4880089DD55 /* Controllers */,
@@ -133,6 +156,47 @@
 				D804CBA71BF8EB3B00B8C659 /* Info.plist */,
 			);
 			path = StudentBookTests;
+			sourceTree = "<group>";
+		};
+		D80782571C04E59D007344CA /* View Families */ = {
+			isa = PBXGroup;
+			children = (
+				D85C8D231C04FDFD00F3F993 /* Main */,
+			);
+			name = "View Families";
+			sourceTree = "<group>";
+		};
+		D85C8D231C04FDFD00F3F993 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				D85C8D381C05111F00F3F993 /* Controllers */,
+				D85C8D3A1C05112E00F3F993 /* XIBs */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		D85C8D381C05111F00F3F993 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D85C8D2C1C050A1800F3F993 /* MainContainerSplitViewController.swift */,
+				D85C8D341C050EEA00F3F993 /* MainViewController.swift */,
+				D85C8D151C04F3B400F3F993 /* MainWindowController.swift */,
+				D85C8D301C050E5200F3F993 /* SidebarViewController.swift */,
+				D85C8D281C05061800F3F993 /* StudentsTableViewViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D85C8D3A1C05112E00F3F993 /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				D85C8D2D1C050A1800F3F993 /* MainContainerSplitViewController.xib */,
+				D85C8D351C050EEA00F3F993 /* MainViewController.xib */,
+				D85C8D161C04F3B400F3F993 /* MainWindowController.xib */,
+				D85C8D311C050E5200F3F993 /* SidebarViewController.xib */,
+				D85C8D291C05061800F3F993 /* StudentsTableViewViewController.xib */,
+			);
+			name = XIBs;
 			sourceTree = "<group>";
 		};
 		D87F56261BF915B400491092 /* Model */ = {
@@ -159,6 +223,7 @@
 			children = (
 				D888C0EF1BF8F3240089DD55 /* DarkNSWindowController.swift */,
 				D87F562F1BF9189F00491092 /* threading.swift */,
+				D85C8D241C0504A400F3F993 /* NSView.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -276,8 +341,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D85C8D2F1C050A1800F3F993 /* MainContainerSplitViewController.xib in Resources */,
 				D804CB981BF8EB3B00B8C659 /* Assets.xcassets in Resources */,
+				D85C8D2B1C05061800F3F993 /* StudentsTableViewViewController.xib in Resources */,
 				D804CB9B1BF8EB3B00B8C659 /* Main.storyboard in Resources */,
+				D85C8D181C04F3B400F3F993 /* MainWindowController.xib in Resources */,
+				D85C8D371C050EEA00F3F993 /* MainViewController.xib in Resources */,
+				D85C8D331C050E5200F3F993 /* SidebarViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,16 +414,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				D87F56321BF924EE00491092 /* SBNotifications.swift in Sources */,
+				D85C8D2E1C050A1800F3F993 /* MainContainerSplitViewController.swift in Sources */,
 				D886DFF81BF8F6A100D9648D /* StreamReader.swift in Sources */,
+				D85C8D171C04F3B400F3F993 /* MainWindowController.swift in Sources */,
 				D888C0F01BF8F3240089DD55 /* DarkNSWindowController.swift in Sources */,
 				D886DFFF1BF910AA00D9648D /* AppRequestDelegate.swift in Sources */,
 				D886DFFA1BF8F82B00D9648D /* CSVReader.swift in Sources */,
+				D85C8D361C050EEA00F3F993 /* MainViewController.swift in Sources */,
+				D85C8D251C0504A400F3F993 /* NSView.swift in Sources */,
+				D85C8D2A1C05061800F3F993 /* StudentsTableViewViewController.swift in Sources */,
 				D87F56301BF9189F00491092 /* threading.swift in Sources */,
 				D87F562A1BF915DB00491092 /* ScheduleItem.swift in Sources */,
 				D804CB961BF8EB3B00B8C659 /* ViewController.swift in Sources */,
 				D87F56281BF915C500491092 /* Student.swift in Sources */,
 				D87F562E1BF916A500491092 /* StudentBody.swift in Sources */,
 				D804CB941BF8EB3B00B8C659 /* AppDelegate.swift in Sources */,
+				D85C8D321C050E5200F3F993 /* SidebarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,6 +13,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     weak var window: NSWindow!
     var mainVC: ViewController!
+    
+    var windows: [NSWindowController] = []
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         // Insert code here to initialize your application

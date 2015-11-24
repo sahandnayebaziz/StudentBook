@@ -15,31 +15,13 @@ class ViewController: NSViewController {
     var data: StudentBody? = nil {
         didSet {
             dispatch_to_main_queue {
-                for sub in self.view.subviews {
-                    sub.removeFromSuperview()
-                }
-                
-                let label = NSTextField()
-                label.editable = false
-                label.font = NSFont.systemFontOfSize(24, weight: 0.0)
-                label.alignment = .Center
-                label.textColor = NSColor.secondaryLabelColor()
-                label.backgroundColor = NSColor.clearColor()
-                label.bezeled = false
-                label.selectable = false
-                label.drawsBackground = false
-                label.stringValue = "Done!"
-                self.view.addSubview(label)
-                label.snp_makeConstraints { make in
-                    make.centerX.equalTo(self.view.snp_centerX)
-                    make.centerY.equalTo(self.view.snp_centerY).offset(-22)
-                    make.width.equalTo(self.view.snp_width)
-                }
+                self.setUpViewForData()
             }
         }
     }
     
     var progress: NSProgressIndicator? = nil
+    var list: NSTableView!
     
     // MARK: - View Lifecycle -
     override func viewDidLoad() {
@@ -60,14 +42,6 @@ class ViewController: NSViewController {
     }
     
     func configureView() {
-        let blurView = NSVisualEffectView()
-        blurView.material = .Dark
-        blurView.blendingMode = .BehindWindow
-        view.addSubview(blurView, positioned: .Below, relativeTo: nil)
-        view.snp_makeConstraints { make in
-            make.size.equalTo(view.snp_size)
-            make.center.equalTo(view.snp_center)
-        }
         
         let label = NSTextField()
         label.editable = false
@@ -88,7 +62,11 @@ class ViewController: NSViewController {
     
     // MARK: - Receive OS X Actions -
     func receiveRequest(request: StudentBookAppRequest) {
-        AppRequestDelegate.go.receiveRequest(request)
+//        AppRequestDelegate.go.receiveRequest(request)
+        let newWindow = MainWindowController(windowNibName: "MainWindowController")
+        (NSApplication.sharedApplication().delegate! as! AppDelegate).windows.append(newWindow)
+        newWindow.showWindow(self)
+        
     }
     
     func beganNewLine(notification: NSNotification) {
@@ -137,6 +115,17 @@ class ViewController: NSViewController {
         progress!.startAnimation(nil)
     }
     
+    // MARK: - View with data description
+    func setUpViewForData() {
+        for subview in view.subviews {
+            subview.removeFromSuperview()
+        }
+        
+        print("tried adding tableview")
+    }
+    
+
+
 
 
 }

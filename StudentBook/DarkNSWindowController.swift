@@ -31,7 +31,7 @@ class DarkNSWindowController: NSWindowController {
         }
         
         let currentFrame = activeWindow.frame
-        let newFrame = NSRect(x: currentFrame.minX, y: currentFrame.minY, width: 900.0, height: 500.0)
+        let newFrame = NSRect(x: currentFrame.minX, y: currentFrame.minY, width: 900.0, height: 900.0)
         activeWindow.setFrame(newFrame, display: true, animate: true)
     }
 
