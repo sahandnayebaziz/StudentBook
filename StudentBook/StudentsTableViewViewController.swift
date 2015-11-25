@@ -9,12 +9,17 @@
 import Cocoa
 import SnapKit
 
-
+protocol StudentsTableViewSearchResponder {
+    func searching(withQuery: String)
+}
 
 class StudentsTableViewViewController: NSViewController {
     
+    var tableView: NSTableView!
     let delegate = StudentsTableViewDelegate()
     let dataSource = StudentsTableViewDataSource()
+    
+    var responders: [StudentsTableViewSearchResponder] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,23 +46,37 @@ class StudentsTableViewViewController: NSViewController {
             label.drawsBackground = false
         }
         
+        let searchField = NSSearchField()
+        view.addSubview(searchField)
+        searchField.snp_makeConstraints { make in
+            make.top.equalTo(labelStudents.snp_bottom).offset(8)
+            make.width.equalTo(view.snp_width).offset(-16)
+            make.centerX.equalTo(view.snp_centerX)
+            make.height.equalTo(22)
+        }
+        
+        searchField.sendsSearchStringImmediately = true
+        searchField.target = self
+        searchField.action = "searching:"
+        
         let scrollView = NSScrollView()
         view.addSubview(scrollView)
         scrollView.snp_makeConstraints { make in
-            make.top.equalTo(labelStudents.snp_bottom).offset(8)
+            make.top.equalTo(searchField.snp_bottom).offset(8)
             make.bottom.equalTo(view.snp_bottom)
             make.width.equalTo(view.snp_width)
             make.centerX.equalTo(view.snp_centerX)
         }
         
-        let tableView = NSTableView()
+        tableView = NSTableView()
         scrollView.documentView = tableView
         scrollView.backgroundColor = NSColor.clearColor()
         scrollView.drawsBackground = false
         
-        delegate.dataSource = dataSource
         tableView.setDelegate(delegate)
         tableView.setDataSource(dataSource)
+        delegate.dataSource = dataSource
+        responders.append(dataSource)
         
         tableView.addTableColumn(NSTableColumn(identifier: "message"))
         tableView.tableColumns[0].headerCell.stringValue = "names"
@@ -65,6 +84,14 @@ class StudentsTableViewViewController: NSViewController {
         
         tableView.headerView = nil
         tableView.backgroundColor = NSColor.clearColor()
+        
+        tableView.reloadData()
+    }
+    
+    func searching(sender: NSSearchField) {
+        for responder in responders {
+            responder.searching(sender.stringValue)
+        }
         
         tableView.reloadData()
     }

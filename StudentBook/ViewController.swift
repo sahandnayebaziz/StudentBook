@@ -94,6 +94,8 @@ class ViewController: NSViewController {
             subview.removeFromSuperview()
         }
         
+        (NSApplication.sharedApplication().delegate! as! AppDelegate).windows[0].close()
+        
         let newWindow = MainWindowController(windowNibName: "MainWindowController")
         (NSApplication.sharedApplication().delegate! as! AppDelegate).windows.append(newWindow)
         newWindow.showWindow(self)

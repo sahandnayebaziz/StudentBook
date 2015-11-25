@@ -42,6 +42,7 @@ struct SBCSVReader {
                 var period: Int
                 let room = clean(dataElements[4])
                 let className = clean(dataElements[5])
+                let instructor = clean(dataElements[6])
                 
                 if let formattedGrade = Int(clean(dataElements[2])) {
                     grade = formattedGrade
@@ -56,7 +57,7 @@ struct SBCSVReader {
                 }
                 
                 let student = Student(firstName: firstName, lastName: lastName, grade: grade, schedule: [])
-                let newItem = ScheduleItem(name: className, period: period, room: room,  instructor: "")
+                let newItem = ScheduleItem(name: className, period: period, room: room,  instructor: instructor)
 
                 if tempStudentsAndClasses.keys.contains(student) {
                     tempStudentsAndClasses[student]!.append(newItem)

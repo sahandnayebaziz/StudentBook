@@ -13,7 +13,7 @@ class DarkNSWindowController: NSWindowController {
     override func windowDidLoad() {
         super.windowDidLoad()
         
-        (NSApplication.sharedApplication().delegate as! AppDelegate).window = self.window
+        (NSApplication.sharedApplication().delegate as! AppDelegate).windows.append(self)
         
         // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
         self.window?.appearance = NSAppearance(named: NSAppearanceNameVibrantLight)
