@@ -26,31 +26,27 @@ struct SBCSVReader {
         
         var tempStudentsAndClasses: [Student: [ScheduleItem]] = [:]
         
-        func clean(s: String) -> String {
-            return s.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
-        }
-        
         for line in reader {
             
             SBNotificationCenter.postNotification(.BeganNewLine)
             
             let dataElements = line.componentsSeparatedByString(",")
             if dataElements.count >= 7 {
-                let lastName = clean(dataElements[0])
-                let firstName = clean(dataElements[1])
+                let lastName = dataElements[0].clean
+                let firstName = dataElements[1].clean
                 var grade: Int
                 var period: Int
-                let room = clean(dataElements[4])
-                let className = clean(dataElements[5])
-                let instructor = clean(dataElements[6])
+                let room = dataElements[4].clean
+                let className = dataElements[5].clean
+                let instructor = dataElements[6].clean
                 
-                if let formattedGrade = Int(clean(dataElements[2])) {
+                if let formattedGrade = Int(dataElements[2].clean) {
                     grade = formattedGrade
                 } else {
                     grade = 999
                 }
                 
-                if let formattedPeriod = Int(clean(dataElements[3])) {
+                if let formattedPeriod = Int(dataElements[3].clean) {
                     period = formattedPeriod
                 } else {
                     period = 999

@@ -90,9 +90,9 @@ class ViewController: NSViewController {
     }
     
     func endedParsing() {
-        for subview in view.subviews {
-            subview.removeFromSuperview()
-        }
+//        for subview in view.subviews {
+//            subview.removeFromSuperview()
+//        }
         
         (NSApplication.sharedApplication().delegate! as! AppDelegate).windows[0].close()
         

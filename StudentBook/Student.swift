@@ -36,6 +36,15 @@ struct Student: Hashable, Equatable {
     }
 }
 
+// equatable
 func ==(lhs: Student, rhs: Student) -> Bool {
     return lhs.grade == rhs.grade && lhs.firstName == rhs.firstName && lhs.lastName == rhs.lastName && lhs.schedule == rhs.schedule
+}
+
+// AnyObject compliance
+class SBWrapper<T> {
+    var value: T
+    init(valueType: T) {
+        value = valueType
+    }
 }

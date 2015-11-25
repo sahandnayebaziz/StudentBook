@@ -10,6 +10,7 @@ import Cocoa
 
 class StudentsTableViewDelegate: NSObject, NSTableViewDelegate {
     
+    var tableView: NSTableView!
     var dataSource: ExposedStudentDataSource!
     
     func tableView(tableView: NSTableView, heightOfRow row: Int) -> CGFloat {
@@ -21,6 +22,13 @@ class StudentsTableViewDelegate: NSObject, NSTableViewDelegate {
         let student = dataSource.data[row]
         view.setDetails("\(student.lastName), \(student.firstName)")
         return view
+    }
+    
+    func tableViewSelectionDidChange(notification: NSNotification) {
+        let selectedIndex = tableView.selectedRow
+        let selectedStudent = dataSource.data[selectedIndex]
+        let student = SBWrapper(valueType: selectedStudent)
+        SBNotificationCenter.postDataNotification(SBDataNotification.SelectedStudent, data: student)
     }
 
 }

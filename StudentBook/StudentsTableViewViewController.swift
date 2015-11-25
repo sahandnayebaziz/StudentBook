@@ -30,20 +30,13 @@ class StudentsTableViewViewController: NSViewController {
             make.height.greaterThanOrEqualTo(250)
         }
         
-        let labelStudents = NSTextField()
+        let labelStudents = NSLabel()
         labelStudents.stringValue = "Students"
         labelStudents.font = NSFont.labelFontOfSize(15)
         view.addSubview(labelStudents)
         labelStudents.snp_makeConstraints { make in
             make.top.equalTo(view.snp_top).offset(10)
             make.left.equalTo(view.snp_left).offset(10)
-        }
-        
-        for label in [labelStudents] {
-            label.editable = false
-            label.selectable = false
-            label.bezeled = false
-            label.drawsBackground = false
         }
         
         let searchField = NSSearchField()
@@ -75,6 +68,7 @@ class StudentsTableViewViewController: NSViewController {
         
         tableView.setDelegate(delegate)
         tableView.setDataSource(dataSource)
+        delegate.tableView = tableView
         delegate.dataSource = dataSource
         responders.append(dataSource)
         

@@ -28,7 +28,16 @@ class StudentsTableViewDataSource: NSObject, NSTableViewDataSource, ExposedStude
             return
         }
         
-        data = SBDataSilo.get.dataSaved.students.filter({ $0.includesAnythingAbout(withQuery)}).sort(isOrderedBefore)
+        guard withQuery.clean.componentsSeparatedByCharactersInSet(NSCharacterSet.whitespaceCharacterSet()).count != 1 else {
+            data = SBDataSilo.get.dataSaved.students.filter({ $0.includesAnythingAbout(withQuery.clean)}).sort(isOrderedBefore)
+            return
+        }
+        
+        let queryComponents = withQuery.componentsSeparatedByCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        
+        data = SBDataSilo.get.dataSaved.students.filter({
+            $0.includesAnythingAbout(queryComponents[0].clean) && $0.includesAnythingAbout(queryComponents[1].clean)
+        }).sort(isOrderedBefore)
     }
     
 }
