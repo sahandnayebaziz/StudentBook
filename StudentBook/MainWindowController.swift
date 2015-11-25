@@ -14,9 +14,15 @@ class MainWindowController: NSWindowController {
 
     override func windowDidLoad() {
         super.windowDidLoad()
-        window?.titleVisibility = .Hidden
-        window?.toolbar?.displayMode = .IconOnly
         window?.contentView = vc.view
+        self.window?.appearance = NSAppearance(named: NSAppearanceNameVibrantLight)
+        self.window?.styleMask = (self.window?.styleMask)! | NSFullSizeContentViewWindowMask
+        self.window?.titlebarAppearsTransparent = true
+        self.window?.movableByWindowBackground = true
+    }
+    
+    func receiveData(data: StudentBody) {
+        
     }
     
 }

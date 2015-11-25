@@ -33,6 +33,7 @@
 		D87F562E1BF916A500491092 /* StudentBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87F562D1BF916A500491092 /* StudentBody.swift */; };
 		D87F56301BF9189F00491092 /* threading.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87F562F1BF9189F00491092 /* threading.swift */; };
 		D87F56321BF924EE00491092 /* SBNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87F56311BF924EE00491092 /* SBNotifications.swift */; };
+		D88114171C052FEB00C6E10C /* SBDataSilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88114161C052FEB00C6E10C /* SBDataSilo.swift */; };
 		D886DFF81BF8F6A100D9648D /* StreamReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D886DFF71BF8F6A100D9648D /* StreamReader.swift */; };
 		D886DFFA1BF8F82B00D9648D /* CSVReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D886DFF91BF8F82B00D9648D /* CSVReader.swift */; };
 		D886DFFF1BF910AA00D9648D /* AppRequestDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D886DFFE1BF910AA00D9648D /* AppRequestDelegate.swift */; };
@@ -82,6 +83,7 @@
 		D87F562D1BF916A500491092 /* StudentBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentBody.swift; sourceTree = "<group>"; };
 		D87F562F1BF9189F00491092 /* threading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = threading.swift; sourceTree = "<group>"; };
 		D87F56311BF924EE00491092 /* SBNotifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBNotifications.swift; sourceTree = "<group>"; };
+		D88114161C052FEB00C6E10C /* SBDataSilo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBDataSilo.swift; sourceTree = "<group>"; };
 		D886DFF71BF8F6A100D9648D /* StreamReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamReader.swift; sourceTree = "<group>"; };
 		D886DFF91BF8F82B00D9648D /* CSVReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSVReader.swift; sourceTree = "<group>"; };
 		D886DFFE1BF910AA00D9648D /* AppRequestDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRequestDelegate.swift; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 				D886DFFE1BF910AA00D9648D /* AppRequestDelegate.swift */,
 				D886DFFB1BF8F83D00D9648D /* CSV */,
 				D87F56311BF924EE00491092 /* SBNotifications.swift */,
+				D88114161C052FEB00C6E10C /* SBDataSilo.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -436,6 +439,7 @@
 				D886DFFA1BF8F82B00D9648D /* CSVReader.swift in Sources */,
 				D85C8D361C050EEA00F3F993 /* MainViewController.swift in Sources */,
 				D852A0D31C05154100C4720C /* StudentsTableViewDataSource.swift in Sources */,
+				D88114171C052FEB00C6E10C /* SBDataSilo.swift in Sources */,
 				D85C8D251C0504A400F3F993 /* NSView.swift in Sources */,
 				D85C8D2A1C05061800F3F993 /* StudentsTableViewViewController.swift in Sources */,
 				D87F56301BF9189F00491092 /* threading.swift in Sources */,

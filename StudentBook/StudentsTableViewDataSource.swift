@@ -9,15 +9,19 @@
 import Cocoa
 
 protocol ExposedStudentDataSource {
-    var data: [String] { get }
+    var data: [Student] { get }
 }
 
 class StudentsTableViewDataSource: NSObject, NSTableViewDataSource, ExposedStudentDataSource {
     
-    var data = ["Hello", "world", "Hello", "world", "Hello", "world", "Hello", "world", "Hello", "world", "Hello", "world"]
+    var data = SBDataSilo.get.dataSaved.students.sort(isOrderedBefore)
     
     func numberOfRowsInTableView(tableView: NSTableView) -> Int {
         return data.count
     }
     
+}
+
+func isOrderedBefore(one: Student, other: Student) -> Bool {
+    return one.lastName < other.lastName
 }

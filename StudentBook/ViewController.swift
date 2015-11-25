@@ -11,37 +11,16 @@ import SnapKit
 
 class ViewController: NSViewController {
 
-    // MARK: - Properties -
-    var data: StudentBody? = nil {
-        didSet {
-            dispatch_to_main_queue {
-                self.setUpViewForData()
-            }
-        }
-    }
-    
     var progress: NSProgressIndicator? = nil
-    var list: NSTableView!
     
-    // MARK: - View Lifecycle -
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        attachViewToAppDelegate()
-        addNotificationObservers()
-        configureView()
-    }
-    
-    func attachViewToAppDelegate() {
         (NSApplication.sharedApplication().delegate as! AppDelegate).mainVC = self
-    }
-    
-    func addNotificationObservers() {
+        
         SBNotificationCenter.observeNotification(self, notification: SBNotification.BeganParsing, selector: "beganParsing:")
         SBNotificationCenter.observeNotification(self, notification: SBNotification.BeganNewLine, selector: "beganNewLine:")
-    }
-    
-    func configureView() {
+        SBNotificationCenter.observeNotification(self, notification: SBNotification.EndedParsing, selector: "endedParsing")
         
         let label = NSTextField()
         label.editable = false
@@ -60,13 +39,8 @@ class ViewController: NSViewController {
         }
     }
     
-    // MARK: - Receive OS X Actions -
     func receiveRequest(request: StudentBookAppRequest) {
-//        AppRequestDelegate.go.receiveRequest(request)
-        let newWindow = MainWindowController(windowNibName: "MainWindowController")
-        (NSApplication.sharedApplication().delegate! as! AppDelegate).windows.append(newWindow)
-        newWindow.showWindow(self)
-        
+        AppRequestDelegate.go.receiveRequest(request)
     }
     
     func beganNewLine(notification: NSNotification) {
@@ -115,13 +89,14 @@ class ViewController: NSViewController {
         progress!.startAnimation(nil)
     }
     
-    // MARK: - View with data description
-    func setUpViewForData() {
+    func endedParsing() {
         for subview in view.subviews {
             subview.removeFromSuperview()
         }
         
-        print("tried adding tableview")
+        let newWindow = MainWindowController(windowNibName: "MainWindowController")
+        (NSApplication.sharedApplication().delegate! as! AppDelegate).windows.append(newWindow)
+        newWindow.showWindow(self)
     }
     
 

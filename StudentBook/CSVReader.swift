@@ -16,7 +16,7 @@ struct SBCSVReader {
                 return
             }
             
-            AppRequestDelegate.requestMainViewController().data = data
+            SBDataSilo.get.dataSaved(data)
             SBNotificationCenter.postNotification(.EndedParsing)
         }
     }
@@ -29,8 +29,6 @@ struct SBCSVReader {
         func clean(s: String) -> String {
             return s.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
         }
-        
-        var lineCount = 0
         
         for line in reader {
             
@@ -59,7 +57,7 @@ struct SBCSVReader {
                 
                 let student = Student(firstName: firstName, lastName: lastName, grade: grade, schedule: [])
                 let newItem = ScheduleItem(name: className, period: period, room: room,  instructor: "")
-                
+
                 if tempStudentsAndClasses.keys.contains(student) {
                     tempStudentsAndClasses[student]!.append(newItem)
                 } else {
@@ -70,8 +68,8 @@ struct SBCSVReader {
         
         var arrayOfStudents: [Student] = []
         
-        for temp in tempStudentsAndClasses.keys {
-            let completedStudent = Student(firstName: temp.firstName, lastName: temp.lastName, grade: temp.grade, schedule: tempStudentsAndClasses[temp]!)
+        for sKey in tempStudentsAndClasses.keys {
+            let completedStudent = Student(firstName: sKey.firstName, lastName: sKey.lastName, grade: sKey.grade, schedule: tempStudentsAndClasses[sKey]!)
             arrayOfStudents.append(completedStudent)
         }
         

@@ -44,7 +44,7 @@ class StudentsTableViewViewController: NSViewController {
         let scrollView = NSScrollView()
         view.addSubview(scrollView)
         scrollView.snp_makeConstraints { make in
-            make.top.equalTo(labelStudents.snp_bottom).offset(16)
+            make.top.equalTo(labelStudents.snp_bottom).offset(8)
             make.bottom.equalTo(view.snp_bottom)
             make.width.equalTo(view.snp_width)
             make.centerX.equalTo(view.snp_centerX)

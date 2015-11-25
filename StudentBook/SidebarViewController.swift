@@ -20,7 +20,9 @@ class SidebarViewController: NSViewController {
         tableViewViewController = StudentsTableViewViewController()
         view.addSubview(tableViewViewController.view)
         tableViewViewController.view.snp_makeConstraints { make in
-            make.size.equalTo(view.snp_size)
+            make.top.equalTo(view.snp_top).offset(16)
+            make.bottom.equalTo(view.snp_bottom)
+            make.width.equalTo(view.snp_width)
             make.center.equalTo(view.snp_center)
         }
 

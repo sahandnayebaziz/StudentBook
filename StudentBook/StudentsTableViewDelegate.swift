@@ -18,7 +18,8 @@ class StudentsTableViewDelegate: NSObject, NSTableViewDelegate {
     
     func tableView(tableView: NSTableView, viewForTableColumn tableColumn: NSTableColumn?, row: Int) -> NSView? {
         let view = tableView.makeViewWithIdentifier("StudentsTableViewRow", owner: nil) as! StudentsTableViewRow
-        view.setDetails(dataSource.data[row])
+        let student = dataSource.data[row]
+        view.setDetails("\(student.lastName), \(student.firstName)")
         return view
     }
 
